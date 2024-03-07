@@ -1,16 +1,15 @@
 class DataEntity {
   final int id;
-  final double currentWeight;
-  final double proportion;
-  final String createTime;
+  final String data;
   final String createId;
-  final String updateTime;
+  final String createTime;
   final String updateId;
+  final String updateTime;
+
 
   DataEntity({
     required this.id,
-    required this.currentWeight,
-    required this.proportion,
+    required this.data,
     required this.createTime,
     required this.createId,
     required this.updateTime,
@@ -20,8 +19,7 @@ class DataEntity {
   factory DataEntity.fromJson(Map<String, dynamic> json) {
     return DataEntity(
       id: json['id'] as int,
-      currentWeight: json['currentWeight'] as double,
-      proportion: json['proportion'] as double,
+      data: json['data'] as String,
       createTime: json['createTime'] as String,
       createId: json['createId'] as String,
       updateTime: json['updateTime'] as String,
@@ -32,8 +30,7 @@ class DataEntity {
   Map<String, dynamic> toJson() {
     return {
       'id': id,
-      'currentWeight': currentWeight,
-      'proportion': proportion,
+      'data': data,
       'createTime': createTime,
       'createId': createId,
       'updateTime': updateTime,

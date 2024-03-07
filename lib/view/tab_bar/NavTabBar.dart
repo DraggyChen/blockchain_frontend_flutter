@@ -1,5 +1,6 @@
 
 import 'package:blockchain_frontend_flutter/view/blockchain/BlockPage.dart';
+import 'package:blockchain_frontend_flutter/view/data_table/DataPage.dart';
 import 'package:blockchain_frontend_flutter/view/device_parameter/DeviceSettingsPage.dart';
 import 'package:blockchain_frontend_flutter/view/home/HomePage.dart';
 import 'package:flutter/foundation.dart';
@@ -21,11 +22,12 @@ class _NavTabBar extends State<NavTabBar> {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          title: Align(alignment: Alignment.center ,child: Text('Takming uni Blockchain System')),
+          title: Align(alignment: Alignment.center ,child: Text('Takming University Blockchain System')),
           bottom: TabBar(
             isScrollable: kIsWeb? false : Platform.isMacOS? false: true, //若是網頁就平均分散，因為手機版可能太小所以要允許平均分配
             tabs: [
               Tab(child: Text('Functions')), //裝置數值設定介面
+              Tab(child: Text('Data Table')), //原始資料Table頁面
               Tab(child: Text('BlockChain Table')), //區塊鏈後台資訊
             ],
           ),
@@ -34,6 +36,7 @@ class _NavTabBar extends State<NavTabBar> {
           physics: NeverScrollableScrollPhysics(), // 禁止左右滑動切換
           children: [
             DeviceSettingsPage(),
+            DataPage(),
             BlockPage(),
           ],
         ),

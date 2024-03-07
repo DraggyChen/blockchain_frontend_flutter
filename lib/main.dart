@@ -13,7 +13,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+    // 即時房屋傾斜偵測系統基於深度學習與區塊鏈技術整合應用
+      title: '即時房屋傾斜偵測系統',
       theme: ThemeData(
 
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),

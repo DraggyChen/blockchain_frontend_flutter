@@ -21,7 +21,7 @@ class _InputTextFieldState extends State<InputTextField> {
   @override
   void initState() {
     super.initState();
-    text = ''; // 初始文本为空
+    text = ''; // 初始為空
   }
 
   @override
