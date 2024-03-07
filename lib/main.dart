@@ -14,10 +14,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
     // 即時房屋傾斜偵測系統基於深度學習與區塊鏈技術整合應用
-      title: '即時房屋傾斜偵測系統',
+      title: '區塊鏈技術整合應用系統',
       theme: ThemeData(
 
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.black54),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
       home: NavTabBar(),

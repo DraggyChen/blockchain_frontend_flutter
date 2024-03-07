@@ -241,6 +241,7 @@ class _BlockCreate extends State<BlockCreate> {
     // 根據平台調整元件大小
     double fontSize = isMobile ? 12.5 : 20; // 手機版字體大小為原來的一半
     double fontSizeBtn = isMobile ? 12.5 : 15; // 手機版字體大小為原來的一半
+    double fontSizeBtn_smaller = isMobile ? 8.5 : 14; // 手機版字體大小為原來的一半
     double buttonWidth = isMobile ? 100 : 200; // 手機版按鈕寬度為原來的一半
     double inputWidth = isMobile ? 75 : 700; // 手機版輸入框寬度為原來的一半
 
@@ -334,19 +335,32 @@ class _BlockCreate extends State<BlockCreate> {
                         fontSize: fontSizeBtn, fontWeight: FontWeight.bold)),
               ),
               SizedBox(width: 20),
-              // /* 自動抓取資料庫形成區塊 */
-              // ElevatedButton(
-              //     style: ElevatedButton.styleFrom(fixedSize: Size(200, 50)),
-              //     onPressed: () {
-              //       createDataBlock();
-              //     },
-              //     child: Text(
-              //       //
-              //       'AUTOMATICALLY CREATE', //讀取原始資料自動加密成區塊
-              //       style: TextStyle(
-              //           fontSize: fontSizeBtn, fontWeight: FontWeight.bold),
-              //     )),
-              // SizedBox(width: 20),
+              /* 自動抓取資料庫形成區塊 */
+              //TODO 尚未測試是否能成功
+              ElevatedButton(
+                  style: ElevatedButton.styleFrom(fixedSize: Size(250, 50)),
+                  onPressed: () {
+                    createDataBlock();
+                  },
+                  child: Text(
+                    'AUTOMATICALLY CREATE ALL', //讀取原始資料自動加密成區塊
+                    style: TextStyle(
+                        fontSize: fontSizeBtn_smaller, fontWeight: FontWeight.bold),
+                  )),
+              SizedBox(width: 20),
+              /* 刪除所有DATA */
+              //TODO 尚未實作
+              ElevatedButton(
+                  style: ElevatedButton.styleFrom(fixedSize: Size(200, 50)),
+                  onPressed: () {
+                    // verifyBlocks();
+                  },
+                  child: Text(
+                    'DELETE ALL DATA',
+                    style: TextStyle(
+                        fontSize: fontSizeBtn, fontWeight: FontWeight.bold),
+                  )),
+              SizedBox(width: 20),
               /* 區塊驗證 */
               ElevatedButton(
                   style: ElevatedButton.styleFrom(fixedSize: Size(200, 50)),
@@ -367,6 +381,20 @@ class _BlockCreate extends State<BlockCreate> {
                   },
                   child: Text(
                     'DELETE ALL BLOCKS',
+                    style: TextStyle(
+                        fontSize: fontSizeBtn, fontWeight: FontWeight.bold),
+                  )),
+              SizedBox(width: 20),
+              /* 編輯HASH_KEY */
+              //TODO 尚未實作方法
+              ElevatedButton(
+                  style: ElevatedButton.styleFrom(fixedSize: Size(160, 50)),
+                  onPressed: () {
+                    // _confirmDeleteAll();
+
+                  },
+                  child: Text(
+                    'EDIT HASH KEY',
                     style: TextStyle(
                         fontSize: fontSizeBtn, fontWeight: FontWeight.bold),
                   )),
