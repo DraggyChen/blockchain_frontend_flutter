@@ -19,7 +19,7 @@ class _NavTabBar extends State<NavTabBar> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 2,
+      length: 3,
       child: Scaffold(
         appBar: AppBar(
           title: Align(alignment: Alignment.center ,child: Text('Takming University Blockchain System')),

@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: '即時房屋傾斜偵測系統',
       theme: ThemeData(
 
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.black54),
         useMaterial3: true,
       ),
       home: NavTabBar(),

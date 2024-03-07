@@ -512,7 +512,7 @@ class _DataPageState extends State<DataPage> {
             ),
             DataColumn(
               label: Text(
-                'Previous Hash',
+                'Update Id',
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
               onSort: (int columnIndex, bool ascending) {
@@ -526,7 +526,7 @@ class _DataPageState extends State<DataPage> {
             ),
             DataColumn(
               label: Text(
-                'Hash',
+                'Update Time',
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
               onSort: (int columnIndex, bool ascending) {
